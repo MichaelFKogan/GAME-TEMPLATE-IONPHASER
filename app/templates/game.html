@@ -1,0 +1,20 @@
+<ion-view hide-nav-bar="true" hide-back-button="true"> 
+
+
+<!-- PAUSE BUTTON -->
+
+    <button ion-button small ui-sref="app.pause" id="game-button3" style="border-radius:10px 10px 10px 10px; position: fixed; left: 1%; top: 1%; color:grey; background: rgba(255, 255, 255, 0.5);" class="button button-stable button-outline button-small icon ion-ios-pause"></button>
+
+<!-- DEBUG BUTTON -->
+	<ion-floating-button ng-if="isDebugging" click="toggleDebug()" has-footer="false" button-color="#387EF5" icon="ion-bug" icon-color="#FFF" bottom="90px">
+	</ion-floating-button>
+
+	<ion-floating-button ng-if="!isDebugging" click="toggleDebug()" has-footer="false" button-color="#387EF5" icon="ion-bug" icon-color="#000">
+	</ion-floating-button>
+
+
+<!-- LOAD PHASER FLAPPYBIRD GAME HERE -->
+    <ion-phaser game="game" style="height: 100%;"></ion-phaser>
+
+
+</ion-view>
